@@ -41,4 +41,21 @@ public class Post {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
+
+    public void setTitle(String title) {
+    this.title = title;}
+
+    public void setContent(String content) {
+    this.content = content;}
+
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User author;
+
+    public User getAuthor() {
+    return author;}
+
+    public void setAuthor(User author) {
+    this.author = author;}
 }
